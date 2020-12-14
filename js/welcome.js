@@ -31,9 +31,23 @@ mobileInfo.addEventListener("click", openCloseModal);
 (function(){
   if(unlock=='0'){
   }else if(tutorial==1){
+    password();
     walkthrough();
   }
 })();
+
+function password(){
+  var password;
+  var pass1="8na853";
+  password = prompt("Please enter your password",'');
+  if(password==pass1){
+    alert("password correct");
+  }else{
+    while(password!=pass1){
+      var password = prompt('Incorrect - Please Try Again.','');  
+    }
+  }
+}
 
 function walkthrough(){
   openClose = -1;
